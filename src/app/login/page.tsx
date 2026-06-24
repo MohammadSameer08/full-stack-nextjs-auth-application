@@ -28,6 +28,7 @@ export default function LoginPage() {
                 body: JSON.stringify(user),
             });
             const data = await response.json();
+            console.log("Login response:", data);
             if (response.ok) {
                 router.push("/profile");
             } else {
